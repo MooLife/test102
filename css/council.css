@@ -1,0 +1,383 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    .amiri-regular {
+        font-family: "Amiri", serif;
+        font-weight: 400;
+        font-style: normal;
+        box-sizing: content-box;
+}
+
+section{
+    padding: 100px 150px;
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    background: #0166a6;
+}
+#chk1{
+    display: none;
+}
+header ul{
+    flex:2;
+    display:flex;
+}
+header ul li {
+    list-style: none;
+
+}
+header ul li a{
+    text-decoration: none;
+    color: orange;
+}
+#buttonslider{
+    border-radius: 12px;
+    display: flex;
+    background-color: white;
+    padding: 20px 20px ;
+    width: 250px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+#abutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li a:hover{
+    border-bottom :2px solid orange;
+}
+
+.search-box button {
+    position: absolute;
+}
+header ul {
+    display: flex;
+    position: fixed;
+    top: 72px;
+    right: -100%;
+    background: #0166a6;
+    opacity: .9;
+    height: calc(100vh - 20px);
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+    z-index: 4;
+}
+
+
+#chk1:checked ~ ul{
+    right: 0;
+}
+.menu img{
+    height: 40px;
+    width: 40px;
+    position:absolute;
+}
+.socialicon{
+    margin-top: 30px ;
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+.display-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.just{
+    justify-content: center;
+}
+.text-white{
+    color: white;
+}
+.text-blue{
+    color: #ff9f0f;
+}
+nav img{
+    width: 80px;
+    height: auto;
+  }
+  nav ul {
+    list-style: none;
+    width:20%
+  }
+  nav ul a{
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover{
+      color: #ff9f0f;
+  }
+  .topbarlist{
+    position: fixed;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+  }
+  
+.topbarlist ol{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.topbarlist ol li{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 5px;
+    margin: 0 80px;
+}
+.topbarlist ol li a{
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+    padding: 8px 15px;
+}
+
+.topbarlist ol li a:hover{
+    color: orange;
+}
+
+/* ! mid */
+.mainmid{
+    justify-content: center;
+    align-items: center;
+}
+
+section div {
+    justify-content: center;
+    align-items: center;
+    position: relative; /* This makes it easier to position the text inside */
+    width: 100%; /* Adjust width */
+    height: 620px; /
+   /* Ensures the image doesn't go outside the div */
+}
+
+section div img {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the image fit the width of the container */
+    height: 100%; /* Make the image fit the height of the container */
+    object-fit:contain; /* Keeps the image within the div without stretching */
+    opacity: 1; /* Set the opacity of the image */
+    z-index: 1; /* Send the image to the background */
+}
+
+
+   /* ! Start Footer Section */
+  
+  
+   footer{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #0166a6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+  
+  }
+  footer div {
+    display:flex;
+    padding: 5px 5px;
+    align-items: center;
+    margin: 5px 30px;
+    flex-wrap: wrap;
+  }
+  footer p{
+    color: white;
+    
+  }
+  #social-icons{
+    height: 25px;
+    width: 25px;
+    padding: 0px 2px;
+  }
+
+  #social-icons:hover{
+   border-bottom:2px solid orange;
+  }
+  #copyright{
+    height: 13px;
+    width: 13px;
+  }
+
+   /* ! Start Mobile */
+
+@media(max-width:1000px){
+    /* ! top max width 1000px */
+    .search-box button {
+        position: absolute;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+    }
+    section{
+        padding: 80px 0px;
+    }
+  #none768{
+    display: none;
+  }
+header ul {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        background: #0166a6;
+        height: calc(100vh - 100px);
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        border-radius: 12px;
+        z-index:4;
+    }
+    .mainmid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section div {
+        position: relative; /* This makes it easier to position the text inside */
+        width: 100%; /* Adjust width */
+        overflow: hidden; /* Ensures the image doesn't go outside the div */
+    }
+    
+    section div img {
+        align-self: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%; /* Make the image fit the width of the container */
+        height: 100%; /* Make the image fit the height of the container */
+        object-fit:contain; /* Keeps the image within the div without stretching */
+        opacity: 1; /* Set the opacity of the image */
+        z-index: 1; /* Send the image to the background */
+    }
+    
+    /* ! Footer */
+footer{
+    position: fixed;
+    width: 100%;
+    background-color: #0166a6;
+    display: flex;
+    height: 55px;
+    z-index: 2;
+
+}
+footer h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    section{
+        padding: 30px 25px;
+    }
+  #none768{
+    display: none;
+  }
+  #icon{
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    background: #0166a6;
+  }
+
+header ul {
+        position: fixed;
+        top: 75px;
+        right: -100%;
+        background: #0166a6;
+        height: calc(100vh - 100px);
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        border-radius: 12px;
+        z-index:4;
+    }
+    #buttonslider{
+        border-radius: 12px;
+        display: flex;
+        background-color: white;
+        padding: 20px 20px ;
+        width: 250px;
+        height: 25px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .mainmid{
+        justify-content: center;
+        align-items: center;
+    }
+    section div {
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+        position: relative; /* This makes it easier to position the text inside */
+        width: 100%; /* Adjust width * Ensures the image doesn't go outside the div */
+    }
+    
+    section div img {
+        position: absolute;
+        width: 90%; /* Make the image fit the width of the container */
+        height: 100%; /* Make the image fit the height of the container */
+        object-fit:contain; /* Keeps the image within the div without stretching */
+        opacity: 1; /* Set the opacity of the image */
+        z-index: 1; /* Send the image to the background */
+    }
+    
+    /* ! Footer */
+
+footer{
+    position: fixed;
+    width: 100%;
+    background-color: #0166a6;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    z-index: 3
+}
+footer h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
